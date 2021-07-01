@@ -1,0 +1,28 @@
+@mixin abCenter() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin abCenterX() {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+  
+@mixin abCenterY() {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+@function rem($pixelps, $context: 16) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
