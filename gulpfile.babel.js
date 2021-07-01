@@ -124,7 +124,7 @@ function sprite() {
     );
 
     var imgStream = spriteData.img.pipe(dest('./dist/img/sprite'));
-    var cssStream = spriteData.css.pipe(dest('./src/sass/vendor'));
+    var cssStream = spriteData.css.pipe(dest('./src/scss/vendor'));
 
     return merge(imgStream, cssStream);
 }
